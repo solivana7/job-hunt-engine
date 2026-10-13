@@ -1,0 +1,75 @@
+# Board slugs for the free public APIs. Keys are the API slug, values the display company.
+greenhouse_slugs:
+  lyrahealth: Lyra Health
+  springhealth: Spring Health
+  modernhealth: Modern Health
+  headspace: Headspace
+  calm: Calm
+  twochairs: Two Chairs
+  omadahealth: Omada Health
+  includedhealth: Included Health
+  teladochealth: Teladoc
+  mindbody: Mindbody
+  boulevard: Boulevard
+
+lever_slugs: {}
+  # e.g.  acme: Acme Corp   (find slugs from https://lever.co/v0/postings/<slug>?mode=json)
+
+# SerpAPI Google Jobs queries, rotated daily. Run 3x/week per scoring.yaml.
+serpapi_queries_data_ai:
+  - '"VP Data Analytics" remote'
+  - '"Chief Data Officer" remote'
+  - '"Head of AI" remote'
+  - '"AI Transformation" director remote'
+  - '"VP Data" healthcare remote'
+  - '"Head of Data" remote'
+
+serpapi_queries_wellness:
+  - '"VP wellbeing" remote'
+  - '"director corporate wellness" remote'
+  - '"head of wellness strategy"'
+  - '"director of spa" luxury'
+  - '"employee wellness director" remote'
+
+# Serper.dev site-targeted queries — run in full every fetch (Google indexes
+# LinkedIn/Dice/Monster single postings; hitting those sites directly is either
+# ToS-blocked (LinkedIn, spec guardrail 2) or bot-walled).
+serper_site_queries_data_ai:
+  - "site:linkedin.com/jobs VP Data Analytics remote"
+  - "site:dice.com/job-detail VP Data Analytics"
+  - "site:monster.com VP Data Analytics remote"
+  - "site:linkedin.com/jobs director business intelligence remote"
+  - "vice president business intelligence remote"
+  - "senior director transformation remote"
+  - "site:dice.com/job-detail analytics director consulting"
+  - "transformation director consulting remote"
+
+serper_site_queries_wellness:
+  - "site:linkedin.com/jobs director corporate wellness remote"
+  - "site:dice.com/job-detail wellness director"
+  - "site:monster.com employee wellness director remote"
+
+# Wellness HTML boards (weekly fetch, 1 req/sec, robots.txt respected)
+boards:
+  ispa:
+    company_hint: null           # multiple employers; company parsed per listing
+    list_url: "https://www.ispastaff.com/careers/"
+    enabled: true
+  spaandwellnesscareers:
+    company_hint: null
+    list_url: "https://www.spaandwellnesscareers.com/jobs/"
+    enabled: true
+  hutchinson:
+    company_hint: null
+    list_url: "https://hutchinsonconsulting.com/open-positions/"
+    enabled: true
+  fitt:
+    company_hint: null
+    list_url: "https://fitt.co/jobs"
+    enabled: true
+
+# Generic career-page fallback (weekly). Pages are often JS-heavy; best-effort.
+career_pages:
+  - company: STERIS
+    url: "https://jobs.steris.com/"
+    enabled: false               # enable when a working listing URL pattern is confirmed

@@ -1,0 +1,53 @@
+lane: wellness
+resume_template: resume_template_wellness.docx
+title_waiver: true    # watchlist companies may post domain roles under non-obvious titles
+
+candidate:
+  name: Candidate Name
+  email: owner@example.com
+  phone: "(555) 010-0000"
+  linkedin: "https://linkedin.com/in/example"
+  linkedin_text: "linkedin.com/in/example"
+  location: "City, State"
+  work_auth: "US Citizen"
+  clearance_eligible: true
+
+must_have:
+  remote_ok: true                 # remote, hybrid <=2 days Bay Area, or flagship exception
+  salary_floor: 150000            # lane floor; corp wellbeing roles regularly clear $236k
+  titles_include:
+    - "VP of Wellbeing"
+    - "Vice President Wellbeing"
+    - "Director of Wellbeing"
+    - "Director of Wellness"
+    - "Head of Wellness"
+    - "Head of Wellbeing"
+    - "Corporate Wellness Director"
+    - "Employee Wellness"
+    - "Workforce Health"
+    - "Wellness Strategy"
+    - "Wellness Practice Lead"
+    - "Director of Spa"           # flagship/equity only, see exceptions
+    - "Clinical Performance"
+    - "Clinical Strategy"
+
+fit_signals:
+  industries: [wellness_tech, healthtech, hospitality_luxury, benefits_consulting,
+               corporate_wellness, spa, mental_health_tech]
+  keywords: ["nervous system", "breathwork", "somatic", "employee wellbeing",
+             "behavior change", "burnout", "stress reduction", "resilience",
+             "program design", "workshop", "facilitation", "population health",
+             "biomarker", "outcomes measurement", "engagement"]
+
+kill_criteria:
+  - "requires relocation"
+  - "commission only"
+  # salary_max < 100000 handled by matcher (numeric rule)
+
+exceptions:                       # override salary floor when flagged; the candidate confirms per posting
+  flagship_brands: [Four Seasons, Canyon Ranch, Miraval, Setai, Aman, Golden Door]
+  equity_keywords: ["equity", "stock options", "ownership stake"]
+
+watchlist_companies: [Lyra Health, Spring Health, Modern Health, Headspace, Calm,
+  Two Chairs, Midi Health, ŌURA, BetterHelp, Teladoc, Omada Health, Included Health,
+  Zenoti, Mindbody, Boulevard, Mercer, WTW, Aon, Canyon Ranch, Miraval, Four Seasons]

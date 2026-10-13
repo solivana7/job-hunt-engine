@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.gmail_token.json
+artifacts/
+!.gitkeep
+.DS_Store
+.pytest_cache/
+build/
+*.egg-info/
+logs/

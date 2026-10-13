@@ -1,0 +1,12 @@
+digest_min: 80          # score required to appear in the daily digest (data_ai lane)
+digest_min_wellness: 70 # wellness lane: thinner pool, surface near-misses too
+salary_floor_exec: 240000    # VP / Chief / Head / partner-track floor (original spec)
+salary_floor_senior: 165000  # Senior Manager / Director tier (broader search)
+instant_alert: 90       # score that triggers an instant notification
+rules_base_points: 40   # points awarded for passing all rules checks
+salary_null_cap: 79     # score cap when the posting has no salary data
+exception_cap: 79       # score cap for below-floor postings held for exception review
+serpapi_frequency: mon_wed_fri   # free-tier budget: 11 queries x ~13 runs/month
+boards_frequency: weekly         # HTML boards: weekly fetch
+request_delay_seconds: 1.0       # 1 req/sec ceiling on all fetching
+user_agent: "JobHuntEngine/2.0 (personal job search; contact: owner@example.com)"

@@ -1,0 +1,77 @@
+lane: data_ai
+resume_template: resume_template_data_ai.docx
+
+candidate:
+  name: Candidate Name
+  email: owner@example.com
+  phone: "(555) 010-0000"
+  linkedin: "https://linkedin.com/in/example"
+  linkedin_text: "linkedin.com/in/example"
+  location: "City, State"
+  work_auth: "US Citizen"
+  clearance_eligible: true
+
+must_have:
+  remote_ok: true               # remote OR hybrid <= 2 days in Bay Area
+  tiered_floors: true           # VP/Chief -> salary_floor_exec; Mgr/Dir -> salary_floor_senior
+  # Tiered floors live in scoring.yaml: 240k exec / 165k senior. Null salary -> cap 79.
+
+title_groups:                   # pass when (any topic) AND (any level); [] levels = inherently senior
+  - name: data_ai_exec
+    topics: ["Chief Data", "Chief AI", "Chief Analytics", "Chief Digital Officer",
+             "Head of Data", "Head of AI", "Head of Analytics",
+             "AI Transformation", "Data & Analytics", "Data Analytics", "Data and Analytics",
+             "CDO", "CAO"]
+    levels: []
+  - name: bi_analytics
+    topics: ["Business Intelligence", "Analytics", "Data Science", "Data Engineering",
+             "Insights", "Decision Intelligence", "BI"]
+    levels: ["Senior Manager", "Sr Manager", "Senior Director", "Director",
+             "Vice President", "VP", "Head"]
+  - name: transformation
+    topics: ["Transformation", "Digital Transformation", "Operating Model", "Strategy"]
+    levels: ["Senior Manager", "Sr Manager", "Senior Director", "Director",
+             "Vice President", "VP", "Head", "Chief"]
+  - name: consulting
+    topics: ["Consulting", "Consultant", "Advisory", "Management Consulting",
+             "Digital Strategy", "Business Transformation"]
+    levels: ["Senior Manager", "Senior Consultant", "Senior Director", "Director",
+             "Vice President", "VP", "Principal", "Partner", "Managing Director"]
+
+titles_include:                 # legacy exact-substring gate (kept for tools/tests)
+    - "VP Data"
+    - "Vice President Data"
+    - "VP of Data"
+    - "Vice President of Data"
+    - "Chief Data Officer"
+    - "Chief Data"
+    - "Chief AI"
+    - "Head of Data"
+    - "Head of AI"
+    - "AI Transformation"
+    - "Data & Analytics"
+    - "Data Analytics"
+    - "Data and Analytics"
+    - "Chief Analytics Officer"
+    - "VP Wellbeing"            # wellness-bridge lane
+    - "Head of Workforce Health"
+
+fit_signals:
+  industries: [healthtech, healthcare, fintech, retail, enterprise_saas, insurance,
+               wellness, consulting, professional_services]
+  keywords: ["AI Center of Excellence", "data governance", "AI-first operating model",
+             "board", "data monetization", "decision intelligence", "GenAI", "LLM",
+             "Snowflake", "Databricks", "transformation", "Fortune 500",
+             "business intelligence", "Power BI", "Tableau", "Looker", "analytics strategy",
+             "operating model", "advisory", "client engagement", "change management",
+             "digital transformation", "process transformation", "PMO"]
+
+kill_criteria:                  # hard_pass=false, never digested
+  - "requires relocation"
+  - "security clearance required"   # eligible != holding active clearance
+  - "individual contributor only"
+  - "onsite 5 days"
+
+watchlist_companies: [Lyra Health, Optum, UnitedHealth Group, STERIS, Omada Health,
+  Included Health, Teladoc, Headspace, Modern Health, Spring Health, Zenoti,
+  Mindbody, Boulevard, S&P Global, Charles Schwab, Levi Strauss]
